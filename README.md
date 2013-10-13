@@ -10,3 +10,15 @@ Sous OS X, normalement, Python est toujours installé avec ses headers. XCode av
 tools" devrait alors être suffisant.
 
 Sous Windows, arrangez vous. Compiler des trucs sous Windows, c'est vraiment compliqué.
+
+Bootstrapping
+---
+
+Les projets 2 et 3 ont besoin, optionellement, de [pytest][pytest] et [cython][cython]. Le script
+``bootstrap.sh`` permet d'automatiquement configurer cet environnement. Il faut Python 3.3+. On peut
+le rouler avec:
+
+    ./bootstrap.sh
+
+[pytest]: http://pytest.org/
+[cython]: http://cython.org/

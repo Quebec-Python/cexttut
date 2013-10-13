@@ -38,3 +38,13 @@ fast2_time = time.time() - start_time
 print("Temps %2.2f" % fast2_time)
 
 assert res_slow1 == res_slow2 == res_fast1 == res_fast2
+
+try:
+    import cython_fast
+    print("On a le Cython! Et si on l'essayait?")
+    start_time = time.time()
+    res_fast1 = [cython_fast.cython_fast(l) for l in lists]
+    fast_time = time.time() - start_time
+    print("Temps %2.2f" % fast_time)
+except ImportError:
+    pass
